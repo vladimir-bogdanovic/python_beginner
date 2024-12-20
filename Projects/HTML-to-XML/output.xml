@@ -1,0 +1,25 @@
+ <div class="navigation-container">
+  <a (click)="goToHomePage()" class="navbar-item">
+   Home
+  </a>
+  <a (click)="goToProgramsPage()" class="navbar-item">
+   Programs
+  </a>
+  <a (click)="goToExercisesPage()" class="navbar-item">
+   Exercises
+  </a>
+ </div>
+ <div *ngif="!loggedIn" class="auth-container">
+  <a (click)="goToSignupPage()" class="navbar-item">
+   Signup
+  </a>
+  <a (click)="goToLoginPage()" class="navbar-item">
+   Login
+  </a>
+ </div>
+ <div *ngif="loggedIn" class="auth-container">
+  <a (click)="logout()" class="navbar-item">
+   Logout
+  </a>
+ </div>
+</div>
